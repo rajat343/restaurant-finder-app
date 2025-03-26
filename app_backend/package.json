@@ -1,0 +1,43 @@
+{
+	"name": "team-project-cmpe202_fall24_hustlesquad",
+	"version": "1.0.0",
+	"description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ecKK6Yb3)",
+	"main": "dist/index.js",
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/index.js",
+		"start:dev": "nodemon --watch src --ext ts,json --exec \"node --loader ts-node/esm src/index.ts\""
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/passport-google-oauth20": "^2.0.16",
+		"aws-sdk": "^2.1692.0",
+		"axios": "^1.7.9",
+		"bcrypt": "^5.1.1",
+		"bcryptjs": "^2.4.3",
+		"cookie-parser": "^1.4.7",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.1",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^8.7.3",
+		"multer": "^1.4.5-lts.1",
+		"passport": "^0.7.0",
+		"passport-google-oauth20": "^2.0.0",
+		"passport-jwt": "^4.0.1",
+		"passport-local": "^1.0.0"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/jsonwebtoken": "^9.0.7",
+		"@types/mongoose": "^5.11.97",
+		"@types/node": "^20.16.11",
+		"esm": "^3.2.25",
+		"nodemon": "^3.1.7",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.6.2"
+	}
+}

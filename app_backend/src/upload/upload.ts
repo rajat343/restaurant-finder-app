@@ -39,7 +39,6 @@ router.post("", [upload.array("files"), isUserLoggedIn], async (req, res) => {
 				message: "Folder name is required!",
 			});
 		}
-		// Upload to S3
 		const uploadResults: { fileName: string; url: string }[] = [];
 		for (const file of req.files) {
 			const customFileName = `${userId}_${Date.now()}_${
@@ -49,7 +48,6 @@ router.post("", [upload.array("files"), isUserLoggedIn], async (req, res) => {
 				Bucket: process.env.AWS_S3_BUCKET_NAME as string,
 				Key: `${folderName}/${customFileName}`,
 				Body: file.buffer,
-
 			};
 			const data = await s3.upload(uploadParams).promise();
 			let uploadObj = {

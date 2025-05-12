@@ -6,7 +6,7 @@ export const loadEnv = (): void => {
 		dotenv.config({ path: ".env" });
 	} else {
 		process.env.NODE_ENV = "staging";
-		dotenv.config({ path: ".env" });
+		dotenv.config({ path: ".env.staging" });
 	}
 };
 
